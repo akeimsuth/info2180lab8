@@ -1,3 +1,11 @@
+function choice(str){
+	if(document.getElementById("check").checked!=true){
+		response(str);
+	}else{
+		all(str);
+	}
+}
+
 function response(str)
 {
 if (str.length==0)
@@ -32,6 +40,6 @@ xmlhttp.onreadystatechange=function()
     document.getElementById("result").innerHTML=xmlhttp.responseText;
     }
   }
-xmlhttp.open("GET","world.php?lookup="+str,true);
+xmlhttp.open("GET","world.php?all="+true,true);
 xmlhttp.send();
 }

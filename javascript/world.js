@@ -1,3 +1,11 @@
+function choice(str){
+	if(document.getElementById("check").checked!=true){
+		response(str);
+	}else{
+		all(str);
+	}
+}
+
 function response(str)
 {
 if (str.length==0)
@@ -17,7 +25,7 @@ xmlhttp.open("GET","world.php?lookup="+str,true);
 xmlhttp.send();
 }
 
-function all()
+function all(str)
 {
 if (str.length==0)
   { 
